@@ -1,0 +1,252 @@
+:root{
+    --main-col: #00a2e8;
+    --sec-col: #99d8ea;
+    --ter-col: #ff99cc;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Roboto', Geneva, Tahoma, sans-serif;
+}
+
+#container{
+    width: 85vw;
+    min-width: 650px;
+    height: 100vh;
+
+    margin: auto;
+}
+
+#title-bar{
+    width: 120px;
+    height: auto;
+
+    background-color: var(--main-col);
+    padding: 10px;
+
+    text-align: center;
+}
+
+.app-card{
+    background-color: var(--main-col);
+
+    position: relative;
+
+    width: 100%;
+    height: 600px;
+}
+
+.app-card > *{
+    position: absolute;
+}
+
+#prog-bar{
+    background-color: var(--sec-col);
+    width: 100%;
+    height: 10px;
+
+    top: 0;
+    left: 0;
+}
+
+#helper{
+    top: 30px;
+    left: 30px;
+}
+
+#timer{
+    top: 30px;
+    right: 30px;
+
+    width: 70px;
+    height: 80px;
+
+    text-align: center;
+}
+
+#clock{
+    background-color: white !important;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+}
+
+#clock p{
+    line-height: 70px;
+    font-size: 30px;
+    color: var(--main-col) !important;
+    transition: font-size 0.5s ease-in-out;
+}
+
+#question-box{
+
+    height: auto;
+    width: auto;
+
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+
+    transition-duration: 1s;
+
+}
+
+#question-name{
+    font-size: 90px;
+}
+
+#question-artist{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#score{
+    bottom: 60px;
+    left: 60px;
+
+    border-left: 5px solid white;
+}
+
+#score > *{
+    text-indent: 10px;
+}
+
+#current-score{
+    font-size: 20px;
+}
+
+#high-score{
+    font-size: 15px;
+}
+
+.emphasise-text{
+    font-size: 40px !important;
+    transition: font-size 0.5s ease-in-out;
+}
+
+.correct{
+    color: var(--sec-col);
+    transition: 0.5s;
+}
+
+.incorrect{
+    color: var(--ter-col);
+    transition: 0.5s;
+}
+
+
+#question-card{
+    margin-top: 30px;
+}
+
+#finish-card{
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+#finish-card > div{
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: 1s;
+}
+
+.fin-btn:hover{
+    font-size: 40px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#finish-title{
+    font-size: 60px;
+    top: 10px;
+}
+
+@keyframes breathe-score{
+    0% {font-size: 150px; opacity: 0.5;}
+    50% {font-size: 180px; opacity: 0.3; top: 35px;}
+    100% {font-size: 150px; opacity: 0.5;}
+    
+}
+
+#finish-score{
+    top: 70px;
+    font-size: 150px;
+    font-weight: 800;
+    opacity: 0.5;
+    animation: 5s breathe-score ease-in-out infinite;
+}
+
+#leader-board{
+    bottom: 240px;
+}
+
+#submit-score{
+    bottom: 185px;
+}
+
+#add-question{
+    bottom: 130px;
+}
+
+#replay{
+    bottom: 75px;
+}
+
+#leader-card{
+    opacity: 0;
+}
+
+#name-input{
+    
+    width: 40vw;
+    height: auto;
+
+    left: 50%;
+    top: 250px;
+    transform: translateX(-50%);
+
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+#name-input::placeholder{
+    color: white;
+    transition: 1s;
+}
+
+/* ---------------------------- FORMAT THE TABLE PROPERLY WITH THE OVERFLOW HIDDEN ------------------------------ */
+
+#score-board{
+
+    opacity: 1;
+    transition: 1s;
+
+    width: 100%;
+}
+
+#score-board-container{
+    opacity: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+    top: 20px;
+    width: 500px;
+    font-size: 35px;
+
+}
+
+#score-board-container::-webkit-scrollbar{
+    background: white;
+    width: 10px;
+}
+
+#score-board-container::-webkit-scrollbar-thumb{
+    background-color: var(--sec-col);
+}

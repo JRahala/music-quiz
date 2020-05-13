@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel = 'stylesheet' href = {{url_for('static', filename = 'style.css')}} />
+        <title> Music Quiz </title>
+    </head>
+
+    <body>
+
+        <div id = 'container'>
+
+            <div id = 'title-bar'>
+                the music quiz
+            </div>
+
+            <div class = 'app-card' id = 'question-card'>
+                <div id = 'prog-bar'></div>
+                <div id = 'helper'> Type in the name of the song </div>
+
+                <div id = 'timer'>
+                    <div id = 'clock'><p>15</p></div>
+                    <div id = 'clock-helper'>seconds left</div>
+                </div>
+
+                <div id = 'question-box'>
+                    <div id = 'question-name'> </div>
+                    <div id = 'question-artist'> </div>
+                </div>
+
+                <div id = 'score'>
+                    <div id = 'current-score'> Current Score : 0000</div>
+                    <div id = 'high-score'> High Score : 4000</div>
+                </div>
+            </div>
+
+            <!-- noice hard coded transforms because thats what good software engineers do -->
+
+            <div class = 'app-card' id = 'finish-card'>
+
+                <div id = 'finish-title'> Game over </div>
+                <div id = 'finish-score'> 98790 </div>
+
+                <input id = 'name-input' placeholder = 'click + type in your username'/>
+
+                <!-- add these functions in -->
+
+                <div id = 'score-board-container'>
+                    <table id = 'score-board'> 
+                        <tr> 
+                            <th> Username </th> 
+                            <th> Score </th> 
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div id = 'leader-board' class = 'fin-btn' onclick = 'leader_board()'> Leader board</div>
+                <div id = 'submit-score' class = 'fin-btn' onclick = 'submit_score()'> Submit score </div> <!-- only allow one submit score -->
+                <div id = 'add-question' class = 'fin-btn' onclick = 'add_question()'> Add question </div>
+                <div id = 'replay' class = 'fin-btn' onclick = 'replay()'> Replay? </div>
+
+            </div>
+            
+
+        </div>
+
+        <script src = {{url_for('static', filename = 'script.js')}}></script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!-- Dont have to make look nice -->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel = 'stylesheet' href = {{url_for('static', filename = 'admin.css')}} />
+</head>
+
+<body>
+
+    <button onclick = edit_question()> Edit question </button>
+    <button onclick = del_question()> Delete question </button>
+
+
+
+    <table id = 'question-table'>
+        <tr>
+            <th> Question Name </th>
+            <th> Edit </th>
+            <th> Remove </th>
+        </tr>
+    </table>
+
+</body>
+
+<script src = {{url_for('static', filename = 'admin.js')}}></script>
+
+</html>
